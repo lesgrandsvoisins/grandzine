@@ -25,11 +25,8 @@ body {
     font-size: 1rem;
     line-height: 1.75rem;
     padding: 50px 50px 35px;
-}
 
-main {
-    padding: 1rem;
-    column-count: 2;
+
     /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
     /* These are technically the same, but use both */
     overflow-wrap: break-word;
@@ -46,6 +43,11 @@ main {
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+}
+
+main {
+    padding: 1rem;
+    column-count: 2;
 }
 
 main h2:first-child,
@@ -73,21 +75,21 @@ h1.with-subtitle {
 
 p.subtitle {
     margin-block-start: 0;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     font-family: grotesk;
     font-weight: 100;
 }
 
 h1 {
     /* color: var(--grandzine-color-secondary); */
-    font-size: 3.5rem;
-    line-height: 2.5rem;
-
+    font-size: 3rem;
+    line-height: 3rem;
 }
 
 h2 {
-    font-size: 1.2rem;
-    line-height: 1.75rem;
+    font-size: 2rem;
+    line-height: 2rem;
 }
 
 div.top-bar {
@@ -158,6 +160,11 @@ div.menu-bar div.menu-item {
 
     div.top-bar div.bar-left {
         margin: 0 auto;
+        text-align: center;
+    }
+
+    div.top-bar div.bar-right {
+        text-align: center;
     }
 
     .top-bar-image-right {
@@ -171,7 +178,7 @@ div.menu-bar div.menu-item {
 
     h1 {
         font-size: 2.5rem;
-        line-height: 1.75rem;
+        line-height: 2.5rem;
     }
 
     header {
