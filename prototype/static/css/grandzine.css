@@ -1,5 +1,6 @@
-@include '../fonts/grotesk/font.css';
-@include '../fonts/fengardo/font.css';
+@import url('../fonts/grotesk/font.css');
+@import url('../fonts/fengardo/font.css');
+@import url('../fonts/literata/font.css');
 
 * {
     box-sizing: border-box;
@@ -20,12 +21,9 @@ body {
 
 body {
     background-color: #e7e7e7;
-    font-family: system-ui, sans-serif;
+    font-family: literata, system-ui, sans-serif;
     font-size: 1rem;
     line-height: 1.75rem;
-}
-
-header {
     padding: 50px 50px 35px;
 }
 
@@ -89,7 +87,7 @@ div.top-bar div.bar-left {
     margin-top: 0px;
     margin-right: auto;
     margin-bottom: 0px;
-    margin-left: auto;
+    margin-left: 0px;
     flex: 0 0 auto;
 }
 
@@ -116,6 +114,10 @@ div.menu-bar div.menu-item {
 @media screen and (max-width: 800px) {
     div.top-bar {
         flex-direction: column-reverse;
+    }
+
+    div.top-bar div.bar-left {
+        margin: 0 auto;
     }
 
     .top-bar-image-right {
