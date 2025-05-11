@@ -1,3 +1,6 @@
+@include '../fonts/grotesk/font.css';
+@include '../fonts/fengardo/font.css';
+
 * {
     box-sizing: border-box;
 }
@@ -31,9 +34,18 @@ footer {
     text-align: center;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: grotesk;
+}
+
 h1 {
-    color: var(--grandzine-color-secondary);
-    font-size: 1.5rem;
+    /* color: var(--grandzine-color-secondary); */
+    font-size: 3.5rem;
     line-height: 2.5rem;
 }
 
@@ -55,6 +67,10 @@ div.top-bar {
     border-bottom-right-radius: 0rem;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+div.top-bar div {
+    align-content: center;
 }
 
 div.menu-bar {
@@ -91,10 +107,39 @@ div.top-bar div.bar-left img {
     margin-bottom: auto;
 }
 
-
-
 div.menu-bar div.menu-item {
     flex-basis: 20%;
     padding: 10px;
     text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    div.top-bar {
+        flex-direction: column-reverse;
+    }
+
+    .top-bar-image-right {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.75rem;
+    }
+
+    header {
+        width: 100%;
+        padding: 0;
+    }
+
+    div.menu-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    body {
+        padding: 1rem;
+    }
+
 }
