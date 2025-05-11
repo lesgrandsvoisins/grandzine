@@ -26,6 +26,15 @@ body {
     line-height: 1.75rem;
     padding: 50px 50px 35px;
 
+}
+
+p {
+    margin-block-start: 0.6rem;
+}
+
+main {
+    padding: 1rem;
+    column-count: 2;
 
     /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
     /* These are technically the same, but use both */
@@ -43,11 +52,6 @@ body {
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
-}
-
-main {
-    padding: 1rem;
-    column-count: 2;
 }
 
 main h2:first-child,
@@ -68,6 +72,7 @@ h5,
 h6 {
     font-family: grotesk;
     font-weight: 300;
+    margin-block-end: 0.6rem;
 }
 
 h1.with-subtitle {
@@ -122,6 +127,10 @@ div.menu-bar {
     border-bottom-left-radius: 1rem;
 }
 
+.logo-lgv {
+    max-width: 100%;
+    height: auto;
+}
 
 div.top-bar div.bar-left {
     align-self: center;
