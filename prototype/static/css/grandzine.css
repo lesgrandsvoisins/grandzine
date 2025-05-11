@@ -67,6 +67,7 @@ h4,
 h5,
 h6 {
     font-family: grotesk;
+    font-weight: 300;
 }
 
 h1.with-subtitle {
