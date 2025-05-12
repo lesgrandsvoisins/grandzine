@@ -11,20 +11,37 @@ body {
 }
 
 :root {
-    --grandzine-color-primary: #cf549e;
-    --grandzine-color-secondary: #b9227d;
-    --grandzine-color-accent: #ffb347;
-    --grandzine-color-success: #28a745;
-    --grandzine-color-warning: #ffc107;
-    --grandzine-color-error: #dc3545;
+    color-scheme: light dark;
+    --dark-blue-gray: #6b6f9cff;
+    --white: #fff;
+    --black: #000;
+    --cadet-blue-crayola: #a7b4bbff;
+    --silver-sand: #c8c9cbff;
+    --verdigris: #3db4b1ff;
+
+    --color-primary: var(--dark-blue-gray);
+    --color-secondary: var(--cadet-blue-crayola);
+    --color-accent: var(--verdigris);
+    --color-success: var(--verdigris);
+    --color-warning: var(--verdigris);
+    --color-error: var(--verdigris);
+
+    --page-border-bg: light-dark(var(--cadet-blue-crayola), var(--dark-blue-gray));
+    --background-color: light-dark(var(--white), var(--black));
+    --text-color: light-dark(var(--black), var(--white));
+    --heading-color: light-dark(var(--dark-blue-gray), var(--cadet-blue-crayola));
+    --button-bg: light-dark(var(--white), var(--dark-blue-gray));
+    --button-text: light-dark(var(--black), var(--white));
 }
 
+
 body {
-    background-color: #e7e7e7;
-    font-family: literata, system-ui, sans-serif;
+    background-color: var(--page-border-bg);
+    color: var(--text-color);
+    font-family: literata, system-ui, serif;
     font-size: 1rem;
     line-height: 1.75rem;
-    padding: 50px 50px 35px;
+    padding: 2rem 2rem 1.5rem;
 
 }
 
@@ -35,6 +52,12 @@ p {
 main {
     padding: 1rem;
     column-count: 2;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    border-radius: 1rem;
+    background-color: var(--background-color);
 
     /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
     /* These are technically the same, but use both */
@@ -62,6 +85,10 @@ main p:first-child {
 footer {
     margin-top: 30px;
     text-align: center;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 h1,
@@ -88,7 +115,7 @@ p.subtitle {
 }
 
 h1 {
-    /* color: var(--grandzine-color-secondary); */
+    color: var(--dark-blue-gray);
     font-size: 3rem;
     line-height: 3rem;
 }
@@ -104,7 +131,7 @@ div.top-bar {
     align-items: stretch;
     flex-wrap: nowrap;
     width: 100%;
-    background-color: white;
+    background-color: var(--background-color);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 0rem;
@@ -122,7 +149,7 @@ div.menu-bar {
     display: flex;
     align-items: stretch;
     flex-wrap: nowrap;
-    background-color: white;
+    background-color: var(--background-color);
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
@@ -140,7 +167,6 @@ div.top-bar div.bar-left {
     margin-left: 0px;
     flex: 0 0 auto;
 }
-
 
 div.top-bar div.bar-right {
     flex-basis: 70%;
@@ -161,6 +187,10 @@ div.menu-bar div.menu-item {
     text-align: center;
     font-family: grotesk;
     font-weight: 200;
+}
+
+div.utility-bar {
+    text-align: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -205,4 +235,15 @@ div.menu-bar div.menu-item {
         padding: 1rem;
     }
 
+}
+
+
+/* Light Mode */
+[data-theme="light"] {
+    color-scheme: light;
+}
+
+/* Dark Mode - forcing this for the example, not advised to do this normally except you want to give your users the option to do so */
+[data-theme="dark"] {
+    color-scheme: dark;
 }
